@@ -1,0 +1,86 @@
+<!--
+  Generated template for the SingleProductDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon padding class="menu" name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title class="toolbar-title" padding-top>{{productType}} {{productId}}</ion-title>
+    <ion-buttons right>
+      <button ion-button>
+        <ion-icon class="cart" name="md-search"></ion-icon>
+        <ion-icon class="cart" name="md-cart" padding></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-item>
+      <img src="{{items[1]}}" class="image" />
+      <h2 class="item_name" text-center>{{items[2]}}</h2>
+    </ion-item>
+    <ion-item>
+    <ion-row>
+      <ion-col col-6>
+        <h5 text-center class="original_price">${{ items[3] }}</h5>
+      </ion-col>
+      <ion-col col-6>
+        <h5 text-center class="discount_price">${{ items[0] }}</h5>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-item>
+    <h2 class="item_name">
+      Reviews
+    </h2>
+    <ion-row>
+      <ion-col col-8>
+    <h4>harshadladva123@gmail.com</h4>
+    <h6>Harshad Ladva</h6>
+  </ion-col>
+  <ion-col col-4>
+      <ion-icon class="star" name="md-star"></ion-icon>
+      <h5 class="rating">4.5</h5>
+    </ion-col>
+  </ion-row>
+  <p class="reviews" text-wrap>This is the best products for purchasing Furniture. I found the best application to purchase furniture data.</p>
+  </ion-item>
+  <ion-item>
+    <ion-row>
+      <ion-col col-6>
+          <button ion-button icon-start>
+              <ion-icon name="cart"></ion-icon>
+              ADD TO CART
+            </button>
+      </ion-col>
+      <ion-col col-6>
+          <button ion-button icon-start>
+              <ion-icon name="information-circle"></ion-icon>
+              PURCHASE NOW
+            </button>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-item>
+    VIEW DETAILS <ion-icon class="arrow" name="ios-arrow-forward"></ion-icon>
+  </ion-item>
+  <ion-card>
+    <ion-card-header>Related Products</ion-card-header>
+    <ion-card-content>
+        <ion-slides *ngIf="slider && slider.length" slidesPerView="2.5">
+            <ion-slide  *ngFor="let img of slider;let i = index;">
+              <img src="{{img.imageUrl}}" class="product_image" />
+              <p class="name" text-center>{{img.name}}</p>
+              <p class="price">{{img.originalPrice}}</p>
+              <p class="price_discount">{{img.discountPrice}}</p>
+            </ion-slide>
+          </ion-slides>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

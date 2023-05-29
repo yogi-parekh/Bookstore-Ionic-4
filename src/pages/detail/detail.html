@@ -1,0 +1,42 @@
+<!--
+  Generated template for the DetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title class="toolbar-title" padding-top> {{type | uppercase}}</ion-title>
+    <ion-buttons right>
+      <button ion-button>
+        <ion-icon class="cart" name="md-search"></ion-icon>
+        <ion-icon class="cart" name="md-cart" padding></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="discount_box">
+      <h5 text-center>{{size}} Products of {{type}} </h5>
+        <!-- <ion-card padding> -->
+        <ion-row wrap>
+          <ion-col class="main_class" col-6 *ngFor="let images of slider;let i = index;">
+            <!-- <button ion-button clear full> -->
+             <img (click)="singleProductDetail(i)" src="{{images.imageUrl}}" class="image"/>
+             <p class="name" text-center>{{images.name}}</p>
+             <ion-row class="price_row">
+               <ion-col col-6>
+            <p class="price" text-center>{{images.originalPrice}}</p>
+          </ion-col>
+          <ion-col col-6 class="discount">
+             <p class="price_discount" text-center>{{images.discountPrice}}</p> 
+            </ion-col>
+            </ion-row>
+            <button ion-button full>PURCHASE NOW</button>
+          <!-- </button> -->
+             <!-- <span class="price">{{images.originalPrice}} {{images.discountPrice}}</span> -->
+            </ion-col>
+        </ion-row>
+      </div>
+</ion-content>

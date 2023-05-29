@@ -1,0 +1,76 @@
+page-bethak {
+  @media (max-width: 567px) {
+   
+    .scroll-content {
+      background-color: #ddd;
+    }
+
+    ion-navbar {
+      background-color: #fff;
+      height: 64px;
+    }
+
+    .box_bed{
+      background: #fff;
+      padding-top: 4px;
+      border-top: 1px solid #ddd;
+    }
+
+    .cart {
+      font-size: 20px;
+      float: right;
+      // margin-right: 20px;
+      margin-top: 28px;
+      color: #fff;
+    }
+
+    .toolbar-title {
+      font-size: 16px;
+      // width: 80%;
+      // float: left;
+      // text-align: center;
+      // margin-left: 4px;
+      margin-top: 4px;
+    }
+
+    .toolbar-title-ios {
+      padding-top: 12px;
+    }
+
+    .slider {
+      height: 150px;
+      padding-top: 8px;
+      width: 100%;
+    }
+
+    .image_card {
+      padding: 24px;
+    }
+
+    .slider_image {
+      width: 100%;
+    }
+
+    .cardview {
+      margin: 8px;
+      box-shadow: 3px;
+    }
+
+    .discount_box {
+      background: #fff;
+    }
+
+    .discount_image{
+      height: 130px;
+    }
+
+    .discount_images{
+      height: 300px;
+    }
+
+    .single_image {
+      height: 150px;
+      width: 100%;
+    }
+  }
+}
